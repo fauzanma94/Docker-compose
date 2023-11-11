@@ -6,7 +6,7 @@ services:
     container_name: mongodb2-volume
     ports:
       - "27017:27017"
-    environtment:
+    environment:
       MONGO_INITDB_ROOT_USERNAME: fauzan
       MONGO_INITDB_ROOT_PASSWORD: fauzan
       MONGO_INITDB_DATABASE: admin
@@ -15,3 +15,6 @@ services:
         source: mongo-data2
         target: "/data/db"
         read_only: false
+
+volumes:
+  mongo-data2:
