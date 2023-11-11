@@ -1,0 +1,17 @@
+version: "3.9"
+
+services: 
+  mongodb2:
+    image: mongo:latest
+    container_name: mongodb2-volume
+    ports:
+      - "27017:27017"
+    environtment:
+      MONGO_INITDB_ROOT_USERNAME: fauzan
+      MONGO_INITDB_ROOT_PASSWORD: fauzan
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - type: volume
+        source: mongo-data2
+        target: "/data/db"
+        read_only: false

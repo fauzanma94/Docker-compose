@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  mongodb-example1:
+    image: mongo:latest
+    container_name: mongodb-example1
+    ports: 
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sister
+      MONGO_INITDB_ROOT_PASSWORD: sister
+      MONGO_INITDB_DATABASE: adminsister
+    
